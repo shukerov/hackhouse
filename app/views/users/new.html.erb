@@ -1,14 +1,21 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hackhouse | Sign Up</title>
+	<%= stylesheet_link_tag    'users', media: 'screen, projection' %>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
 
-<h1>Signup!</h1>
+<h1 class="testclass">Sign Up:</h1>
 
 <%= form_for :user, url: '/users' do |f| %>
 
-	Name: <%= f.text_field :name %>
-	Email: <%= f.text_field :email %>
-	Password: <%= f.password_field :password %>
-	Password Confirmation: <%= f.password_field :password_confirmation %>
+	Name: <%= f.text_field :name %><br />
+	Email: <%= f.text_field :email %><br />
+	Password: <%= f.password_field :password %><br />
+	Password Confirmation: <%= f.password_field :password_confirmation %><br />
 	<%= f.submit "Submit" %>
 
 <% end %>
